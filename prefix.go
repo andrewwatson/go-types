@@ -23,7 +23,7 @@ func (u PrefixUUID) String() string {
 
 // GenerateUUID generates a UUID with the given prefix.
 func GenerateUUID(prefix string) PrefixUUID {
-	uid, _ := uuid.NewV4()
+	uid := uuid.NewV4()
 	id := PrefixUUID{
 		Prefix: prefix,
 		UUID:   uid,
